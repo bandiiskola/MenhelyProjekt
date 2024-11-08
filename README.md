@@ -1,6 +1,7 @@
-Adatbázis mezők:
 ![image](https://github.com/user-attachments/assets/7f61bc3f-4c8d-4423-bbcd-a360d2c8b093)
 
+
+Adatbázis mezők:
 
 nev: pl.(Max) varchar, max 50.
 eletkor: pl.(3) int, max 3 szamjegy.
