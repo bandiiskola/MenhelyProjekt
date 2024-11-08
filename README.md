@@ -1,7 +1,7 @@
 ![image](https://github.com/user-attachments/assets/7f61bc3f-4c8d-4423-bbcd-a360d2c8b093)
 
 
-Adatbázis mezők:
+# Adatbázis mezők:
 
 nev: pl.(Max) varchar, max 50.
 
@@ -26,7 +26,7 @@ fereghajto: pl.(1) tinyint, max 1 számjegy, 0=Nincs oltva, 1=Oltva van.
 datum: pl.(2024-11-08) date, a felhasználó az adatfelvitelnél adja majd meg.
 
 
-API elérések:
+# API elérések:
 
 -Feltöltés: Az API így tölt fel, az inputnak majd ezt kell meghívnia.
 
