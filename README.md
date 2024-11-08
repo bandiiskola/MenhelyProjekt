@@ -28,24 +28,25 @@ datum: pl.(2024-11-08) date, a felhasználó az adatfelvitelnél adja majd meg.
 
 API elérések:
 
--Feltöltés: berenandor.moriczcloud.hu/menhely/feltoltes/{nev}/{eletkor}/{fajta}/{szin}/{nem}/{chip}/{faj}/{veszettseg}/{parvo}/{fereghajto}/{datum}
+-Feltöltés: Az API így tölt fel, az inputnak majd ezt kell meghívnia.
 
-            Az API így tölt fel, az inputnak majd ezt kell meghívnia.
+            berenandor.moriczcloud.hu/menhely/feltoltes/{nev}/{eletkor}/{fajta}/{szin}/{nem}/{chip}/{faj}/{veszettseg}/{parvo}/{fereghajto}/{datum}
 
--Törlés: berenandor.moriczcloud.hu//menhely/torles/{id}
+-Törlés: Az API így törli az adoot id-n lévő rekordot.
 
-            Az API így törli az adoot id-n lévő rekordot.
+            berenandor.moriczcloud.hu//menhely/torles/{id}
 
--Listázás: berenandor.moriczcloud.hu/menhely/listazas
+-Listázás: Az API JSON-be átadja az adatbázisban fent lévő adatokat tömbként.
 
-            Az API JSON-be átadja az adatbázisban fent lévő adatokat tömbként.
+            berenandor.moriczcloud.hu/menhely/listazas
             
--Listázás id szerint: berenandor.moriczcloud.hu/menhely/listazas?id={id}
+-Listázás id szerint: Az API JSON-be átadja az adatbázisban fent lévő adatokat tömbként ahhol egyezik az id. Ez a módosításnál lesz hasznos, hogy az input fieldeket meg lehessen tölteni a fent lévő adatokkal.
 
-            Az API JSON-be átadja az adatbázisban fent lévő adatokat tömbként ahhol egyezik az id. Ez a módosításnál lesz hasznos, hogy az input fieldeket meg lehessen tölteni a fent lévő adatokkal.
+            berenandor.moriczcloud.hu/menhely/listazas?id={id}
 
--Módosítás: berenandor.moriczcloud.hu/menhely/modositas/{id}/{nev}/{eletkor}/{fajta}/{szin}/{nem}/{chip}/{faj}/{veszettseg}/{parvo}/{fereghajto}/{datum}
+-Módosítás: Az API updatel minden adatot egy adott id-n.
 
-            Az API updatel minden adatot egy adott id-n.
+            berenandor.moriczcloud.hu/menhely/modositas/{id}/{nev}/{eletkor}/{fajta}/{szin}/{nem}/{chip}/{faj}/{veszettseg}/{parvo}/{fereghajto}/{datum}
+
 
 Minden oldal kivéve a listázás visszaad status=siker json adatot siker esetén, status=sikertelen adatot hibára futás után.
