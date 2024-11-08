@@ -31,7 +31,8 @@ export class InputComponent{
     const fereghajto = (document.getElementById('deworming') as HTMLInputElement).checked ? 1 : 0;
     const datum = (document.getElementById('date') as HTMLInputElement).value;
     
-    const url = `https://berenandor.moriczcloud.hu/menhely/feltoltes/`+nev+`/`+eletkor+`/`+fajta+`/`+szin+`/`+nem+`/`+chip+`/`+faj+`/`+veszettseg+`/`+parvo+`/`+fereghajto+`/`+datum;
+    const url = `https://berenandor.moriczcloud.hu/menhely/feltoltes/${nev}/${eletkor}/${fajta}/${szin}/${nem}/${chip}/${faj}/${veszettseg}/${parvo}/${fereghajto}/${datum}`;
+
     
     this.http.get(url).subscribe(response => {
       console.log('Response:', response);
