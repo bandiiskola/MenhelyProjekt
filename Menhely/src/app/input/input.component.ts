@@ -1,14 +1,15 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-input',
   standalone: true,
-  imports: [HttpClientModule, HttpClient],
+  imports: [RouterModule],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css',
 })
 export class InputComponent {
+
   formData = {
     nev: '',
     eletkor: null,
@@ -22,8 +23,6 @@ export class InputComponent {
     fereghajto: 0,
     datum: '',
   };
-
-  constructor(private http: HttpClient) {}
 
   onSubmit() {
     const {
