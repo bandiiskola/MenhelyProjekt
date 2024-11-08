@@ -17,7 +17,7 @@ export class InputComponent{
 
   constructor(private http: HttpClient) {}
 
-  onSubmit() {
+  onSubmit():void {
 
     const nev = (document.getElementById('name') as HTMLInputElement).value;
     const eletkor = (document.getElementById('age') as HTMLInputElement).value;
@@ -31,15 +31,41 @@ export class InputComponent{
     const fereghajto = (document.getElementById('deworming') as HTMLInputElement).checked ? 1 : 0;
     const datum = (document.getElementById('date') as HTMLInputElement).value;
     
-    const url = `https://berenandor.moriczcloud.hu/menhely/feltoltes/${nev}/${eletkor}/${fajta}/${szin}/${nem}/${chip}/${faj}/${veszettseg}/${parvo}/${fereghajto}/${datum}`;
-
+    const mezok = [
+      { id: 'name', value: (document.getElementById('name') as HTMLInputElement).value },
+      { id: 'age', value: (document.getElementById('age') as HTMLInputElement).value },
+      { id: 'gender', value: (document.getElementById('gender') as HTMLSelectElement).value },
+      { id: 'species', value: (document.getElementById('species') as HTMLInputElement).value },
+      { id: 'breed', value: (document.getElementById('breed') as HTMLInputElement).value },
+      { id: 'chip', value: (document.getElementById('chip') as HTMLInputElement).value },
+      { id: 'color', value: (document.getElementById('color') as HTMLInputElement).value },
+      { id: 'date', value: (document.getElementById('date') as HTMLInputElement).value }
+    ];
     
-    this.http.get(url).subscribe(response => {
-      console.log('Response:', response);
-      alert('Adatok sikeresen feltöltve!');
-    }, error => {
-      console.error('Error:', error);
-      alert('Hiba történt a feltöltés során.');
-    });
+    const hianyzomezok = mezok.filter(mezok => !mezok.value);
+
+    if (hianyzomezok.length > 0) {
+      alert("Töltsd ki az összes mezőt!")
+    } 
+    else {
+      if(chip.length==15)
+      {
+        const url = `https://berenandor.moriczcloud.hu/menhely/feltoltes/${nev}/${eletkor}/${fajta}/${szin}/${nem}/${chip}/${faj}/${veszettseg}/${parvo}/${fereghajto}/${datum}`;
+
+      
+        this.http.get(url).subscribe(response => {
+          console.log('Response:', response);
+          alert('Adatok sikeresen feltöltve!');
+        }, error => {
+          console.error('Error:', error);
+          alert('Hiba történt a feltöltés során.');
+        });
+      }
+      else
+      {
+        alert("A chipnek pontosan 15 számjegyből kell állnia!")
+      }
+    }
+    
   }
 }
