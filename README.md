@@ -1,3 +1,6 @@
+> [!NOTE]
+> Olvassátok el, fontos infó!
+
 # Adatbázis mezők:
 
 
