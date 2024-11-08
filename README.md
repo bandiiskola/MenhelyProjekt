@@ -4,16 +4,27 @@
 Adatbázis mezők:
 
 nev: pl.(Max) varchar, max 50.
+
 eletkor: pl.(3) int, max 3 szamjegy.
+
 fajta: pl.(Golden Retriever) varchar, max 50.
+
 szin: pl.(arany) varchar, max 40.
+
 nem: pl.(1) tinyint, max 1 számjegy, 0=Nőstény, 1=Hím.
+
 chip: pl.(123456789012345) bigint, csak 15 számjegy lehet.
+
 faj: pl.(kutya) varchar, max 40.
+
 veszettseg: pl.(1) tinyint, max 1 számjegy, 0=Nincs oltva, 1=Oltva van.
+
 parvo: pl.(1) tinyint, max 1 számjegy, 0=Nincs oltva, 1=Oltva van.
+
 fereghajto: pl.(1) tinyint, max 1 számjegy, 0=Nincs oltva, 1=Oltva van.
+
 datum: pl.(2024-11-08) date, a felhasználó az adatfelvitelnél adja majd meg.
+
 
 API elérések:
 
