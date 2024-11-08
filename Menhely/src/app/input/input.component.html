@@ -9,7 +9,6 @@
       id="name"
       class="form-control"
       maxlength="50"
-      [(ngModel)]="formData.nev"
       name="nev"
       required
     />
@@ -22,7 +21,6 @@
       id="age"
       class="form-control"
       max="999"
-      [(ngModel)]="formData.eletkor"
       name="eletkor"
       required
     />
@@ -35,7 +33,6 @@
       id="breed"
       class="form-control"
       maxlength="50"
-      [(ngModel)]="formData.fajta"
       name="fajta"
       required
     />
@@ -48,7 +45,6 @@
       id="color"
       class="form-control"
       maxlength="40"
-      [(ngModel)]="formData.szin"
       name="szin"
       required
     />
@@ -59,7 +55,6 @@
     <select
       id="gender"
       class="form-select"
-      [(ngModel)]="formData.nem"
       name="nem"
       required
     >
@@ -76,7 +71,6 @@
       class="form-control"
       maxlength="15"
       pattern="[0-9]{15}"
-      [(ngModel)]="formData.chip"
       name="chip"
       required
     />
@@ -89,7 +83,6 @@
       id="species"
       class="form-control"
       maxlength="40"
-      [(ngModel)]="formData.faj"
       name="faj"
       required
     />
@@ -100,10 +93,7 @@
       class="form-check-input"
       type="checkbox"
       id="rabies"
-      [(ngModel)]="formData.veszettseg"
       name="veszettseg"
-      [value]="1"
-      [ngModelOptions]="{ standalone: true }"
     />
     <label class="form-check-label" for="rabies">Veszettség oltás</label>
   </div>
@@ -113,10 +103,7 @@
       class="form-check-input"
       type="checkbox"
       id="parvo"
-      [(ngModel)]="formData.parvo"
       name="parvo"
-      [value]="1"
-      [ngModelOptions]="{ standalone: true }"
     />
     <label class="form-check-label" for="parvo">Parvo oltás</label>
   </div>
@@ -126,10 +113,7 @@
       class="form-check-input"
       type="checkbox"
       id="deworming"
-      [(ngModel)]="formData.fereghajto"
       name="fereghajto"
-      [value]="1"
-      [ngModelOptions]="{ standalone: true }"
     />
     <label class="form-check-label" for="deworming">Féregtelenítő</label>
   </div>
@@ -140,7 +124,6 @@
       type="date"
       id="date"
       class="form-control"
-      [(ngModel)]="formData.datum"
       name="datum"
       required
     />

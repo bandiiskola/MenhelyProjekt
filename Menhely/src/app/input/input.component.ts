@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
-import { NgModel } from '@angular/forms';
+
 
 @Component({
   selector: 'app-input',
   standalone: true,
-  imports: [HttpClientModule, NgModel],
+  imports: [HttpClientModule],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css',
 })
