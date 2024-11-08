@@ -30,23 +30,23 @@ datum: pl.(2024-11-08) date, a felhasználó az adatfelvitelnél adja majd meg.
 
 # API elérések:
 
--Feltöltés: Az API így tölt fel, az inputnak majd ezt kell meghívnia.
+- Feltöltés: Az API így tölt fel, az inputnak majd ezt kell meghívnia.
 
             berenandor.moriczcloud.hu/menhely/feltoltes/{nev}/{eletkor}/{fajta}/{szin}/{nem}/{chip}/{faj}/{veszettseg}/{parvo}/{fereghajto}/{datum}
 
--Törlés: Az API így törli az adoot id-n lévő rekordot.
+- Törlés: Az API így törli az adoot id-n lévő rekordot.
 
             berenandor.moriczcloud.hu//menhely/torles/{id}
 
--Listázás: Az API JSON-be átadja az adatbázisban fent lévő adatokat tömbként.
+- Listázás: Az API JSON-be átadja az adatbázisban fent lévő adatokat tömbként.
 
             berenandor.moriczcloud.hu/menhely/listazas
             
--Listázás id szerint: Az API JSON-be átadja az adatbázisban fent lévő adatokat tömbként ahhol egyezik az id. Ez a módosításnál lesz hasznos, hogy az input fieldeket meg lehessen tölteni a fent lévő adatokkal.
+- Listázás id szerint: Az API JSON-be átadja az adatbázisban fent lévő adatokat tömbként ahhol egyezik az id. Ez a módosításnál lesz hasznos, hogy az input fieldeket meg lehessen tölteni a fent lévő adatokkal.
 
             berenandor.moriczcloud.hu/menhely/listazas?id={id}
 
--Módosítás: Az API updatel minden adatot egy adott id-n.
+- Módosítás: Az API updatel minden adatot egy adott id-n.
 
             berenandor.moriczcloud.hu/menhely/modositas/{id}/{nev}/{eletkor}/{fajta}/{szin}/{nem}/{chip}/{faj}/{veszettseg}/{parvo}/{fereghajto}/{datum}
 
