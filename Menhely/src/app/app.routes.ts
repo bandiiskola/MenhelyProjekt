@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
-import { InputComponent } from './input/input.component';
+import { ListaComponent } from './lista/lista.component';
 
 export const routes: Routes = [
-    { path: 'feltoltes', component: InputComponent }
+    {path:'', component: ListaComponent},
+    {path: 'feltoltes', component: InputComponent }
 ];
