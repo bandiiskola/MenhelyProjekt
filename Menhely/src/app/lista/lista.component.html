@@ -3,7 +3,6 @@
     <table class="table table-striped table-bordered">
       <thead class="thead-dark">
         <tr>
-          <th>Azonosító</th>
           <th>Név</th>
           <th>Életkor</th>
           <th>Fajta</th>
@@ -15,11 +14,12 @@
           <th>Parvo</th>
           <th>Féregtelenítés</th>
           <th>Dátum</th>
+          <th>Törlés</th>
+          <th>Módosít</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let pet of pets">
-          <td>{{ pet.id }}</td>
           <td>{{ pet.nev }}</td>
           <td>{{ pet.eletkor }}</td>
           <td>{{ pet.fajta }}</td>
@@ -31,6 +31,8 @@
           <td>{{ pet.parvo ? 'Igen' : 'Nem' }}</td>
           <td>{{ pet.fereghajto ? 'Igen' : 'Nem' }}</td>
           <td>{{ pet.datum }}</td>
+          <td><button class="btn-dark btn" (click)="torol(pet.id)">X</button></td>
+          <td><button class="btn-dark btn" (click)="modosit(pet.id)">Y</button></td>
         </tr>
       </tbody>
     </table>

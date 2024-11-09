@@ -22,4 +22,19 @@ export class ListaComponent implements OnInit{
       console.log('Adatok betöltve:', this.pets);
     });
   }
+
+  torol(id:number): void{
+    const url = `https://berenandor.moriczcloud.hu/menhely/torles/${id}`;
+    if(confirm("Biztosan törölni akarod?"))
+    {
+      this.http.get<any[]>(url).subscribe((data: any[]) => {
+        alert("Törölve");
+        window.location.reload();
+      });
+    }
+  }
+
+  modosit(id:number): void{
+    
+  }
 }
