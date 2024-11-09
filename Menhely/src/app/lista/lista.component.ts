@@ -35,6 +35,6 @@ export class ListaComponent implements OnInit{
   }
 
   modosit(id:number): void{
-    
+    window.location.href=`modosit/${id}`;
   }
 }
