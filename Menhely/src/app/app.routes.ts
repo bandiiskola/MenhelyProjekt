@@ -4,5 +4,6 @@ import { InputComponent } from './input/input.component';
 
 export const routes: Routes = [
     {path:'', component: ListaComponent},
-    {path: 'feltoltes', component: InputComponent}
+    {path: 'feltoltes', component: InputComponent},
+    {path: 'modosit/:id', component: InputComponent },
 ];
