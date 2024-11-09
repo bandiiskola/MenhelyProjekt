@@ -1,23 +1,40 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-input',
   standalone: true,
-  imports: [HttpClientModule, RouterModule],
+  imports: [HttpClientModule, RouterModule, ActivatedRoute],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css',
 })
-export class InputComponent{
+export class InputComponent implements OnInit{
 
-  
+  allatid: string | null = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private route: ActivatedRoute,  // ActivatedRoute az URL paraméterekhez
+    private http: HttpClient        // HttpClient API hívásokhoz
+  ) {}
 
-  onSubmit():void {
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      // Ha van 'id' paraméter az URL-ben, akkor lekérhetjük az értékét
+      this.allatid = params.get('id');
+      
+      if (this.allatid) {
+        console.log('Pet ID found in URL:', this.allatid);
+      } else {
+        console.log('No pet ID found in URL');
+      }
+    });
+
+
+
+  function onSubmit(): void {
 
     const nev = (document.getElementById('name') as HTMLInputElement).value;
     const eletkor = (document.getElementById('age') as HTMLInputElement).value;
