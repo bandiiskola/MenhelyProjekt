@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
@@ -26,18 +25,28 @@ export class InputComponent implements OnInit {
     if(this.allatid!=null)
     {
       let url2 :string = `https://berenandor.moriczcloud.hu/menhely/listazas?id=${this.allatid}`;
-      this.http.get<any[]>(url2).subscribe((data: any[]) => {
-        (document.getElementById('name') as HTMLInputElement).value=data[0].nev;
-        (document.getElementById('age') as HTMLInputElement).value=data[0].eletkor;
-        (document.getElementById('gender') as HTMLInputElement).value=data[0].nem;
-        (document.getElementById('species') as HTMLInputElement).value=data[0].faj;
-        (document.getElementById('breed') as HTMLInputElement).value=data[0].fajta;
-        (document.getElementById('chip') as HTMLInputElement).value=data[0].chip;
-        (document.getElementById('color') as HTMLInputElement).value=data[0].szin;
-        (document.getElementById('date') as HTMLInputElement).value=data[0].datum;
-        (document.getElementById('rabies') as HTMLInputElement).checked = data[0].veszettseg === 1;
-        (document.getElementById('parvo') as HTMLInputElement).checked = data[0].parvo === 1;
-        (document.getElementById('deworming') as HTMLInputElement).checked = data[0].fereghajto === 1;
+      this.http.get<any[]>(url2).subscribe((data: any[] = []) => {
+        const adatok = Object.values(data);
+        (document.getElementById('name') as HTMLInputElement).value=adatok[1];
+        (document.getElementById('age') as HTMLInputElement).value=adatok[2];
+        (document.getElementById('gender') as HTMLInputElement).value=adatok[5];
+        (document.getElementById('species') as HTMLInputElement).value=adatok[7];
+        (document.getElementById('breed') as HTMLInputElement).value=adatok[5];
+        (document.getElementById('chip') as HTMLInputElement).value=adatok[6];
+        (document.getElementById('color') as HTMLInputElement).value=adatok[4];
+        (document.getElementById('date') as HTMLInputElement).value=adatok[11];
+        if(adatok[8]==1)
+        {
+          (document.querySelector('#rabies') as HTMLInputElement).checked = true;
+        }
+        if(adatok[9]==1)
+        {
+          (document.querySelector('#parvo') as HTMLInputElement).checked = true;
+        }
+        if(adatok[10]==1)
+        {
+          (document.querySelector('#deworming') as HTMLInputElement).checked = true;
+        }
       });
       
     }
