@@ -96,6 +96,7 @@ export class InputComponent implements OnInit {
         this.http.get(url).subscribe(response => {
           console.log('Response:', response);
           alert('Adatok sikeresen feltöltve!');
+          window.location.href = "/lista";
         }, error => {
           console.error('Error:', error);
           alert('Hiba történt a feltöltés során.');
