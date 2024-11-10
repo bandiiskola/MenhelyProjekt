@@ -1,3 +1,4 @@
+
 .container {
   padding: 30px;
   border-radius: 15px;
@@ -15,8 +16,8 @@
 }
 
 .form-control:focus, .form-select:focus {
-  border-color: #28a745;
-  box-shadow: 0 0 8px rgba(40, 167, 69, 0.5);
+  border-color: #ffffff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
   outline: none;
 }
 
