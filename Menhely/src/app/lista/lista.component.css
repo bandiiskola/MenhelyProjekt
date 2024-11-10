@@ -38,16 +38,6 @@
     box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.2);
   }
   
-  .btn-outline-danger {
-    border: 1px solid #dc3545;
-    color: #dc3545;
-  }
-  
-  .btn-outline-danger:hover {
-    background-color: #d61226;
-    transition: background-color 0.2s;
-    color: #fff;
-  }
 
   .row .btn-outline-success {
     font-weight: bold;
@@ -70,4 +60,13 @@
   button.btn-outline-danger:focus {
     outline: none;
     box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3);
+  }
+   .btn-outline-danger{
+    border: 1px solid #dc3545  !important ;
+    color: #dc3545  !important ; 
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #d61226  !important ;
+    color: #fff  !important ;
   }
