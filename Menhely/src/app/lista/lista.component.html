@@ -29,9 +29,9 @@
         <td>{{ pet.nem === 1 ? 'Hím' : 'Nőstény' }}</td>
         <td>{{ pet.chip }}</td>
         <td>{{ pet.faj }}</td>
-        <td>{{ pet.veszettseg ? 'Igen' : 'Nem' }}</td>
-        <td>{{ pet.parvo ? 'Igen' : 'Nem' }}</td>
-        <td>{{ pet.fereghajto ? 'Igen' : 'Nem' }}</td>
+        <td>{{ pet.veszettseg ? '✔' : 'X' }}</td>
+        <td>{{ pet.parvo ? '✔' : 'X' }}</td>
+        <td>{{ pet.fereghajto ? '✔' : 'X' }}</td>
         <td>{{ pet.datum }}</td>
         <td><button class="btn btn-dark" (click)="modosit(pet.id)">Módosít</button></td>
         <td><button class="btn btn-dark btn-outline-danger" (click)="torol(pet.id)">Töröl</button></td>
