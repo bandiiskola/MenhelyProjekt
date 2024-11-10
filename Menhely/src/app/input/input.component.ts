@@ -27,11 +27,12 @@ export class InputComponent implements OnInit {
       let url2 :string = `https://berenandor.moriczcloud.hu/menhely/listazas?id=${this.allatid}`;
       this.http.get<any[]>(url2).subscribe((data: any[] = []) => {
         const adatok = Object.values(data);
+        console.log(adatok);
         (document.getElementById('name') as HTMLInputElement).value=adatok[1];
         (document.getElementById('age') as HTMLInputElement).value=adatok[2];
         (document.getElementById('gender') as HTMLInputElement).value=adatok[5];
         (document.getElementById('species') as HTMLInputElement).value=adatok[7];
-        (document.getElementById('breed') as HTMLInputElement).value=adatok[5];
+        (document.getElementById('breed') as HTMLInputElement).value=adatok[3];
         (document.getElementById('chip') as HTMLInputElement).value=adatok[6];
         (document.getElementById('color') as HTMLInputElement).value=adatok[4];
         (document.getElementById('date') as HTMLInputElement).value=adatok[11];
