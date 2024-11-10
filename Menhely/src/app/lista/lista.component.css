@@ -54,11 +54,7 @@
     color: #fff;
   }
 
-  .table td:hover,
-  .table th:hover {
-    background-color: #494949;
-    color: #ffffff;
-  }
+
   
   button.btn-dark:focus,
   button.btn-outline-danger:focus {
