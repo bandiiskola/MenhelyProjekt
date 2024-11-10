@@ -44,7 +44,8 @@
   }
   
   .btn-outline-danger:hover {
-    background-color: #dc3545;
+    background-color: #d61226;
+    transition: background-color 0.2s;
     color: #fff;
   }
 
