@@ -78,3 +78,14 @@
       font-size: 1em;
     }
   }
+
+  .balra
+  {
+    margin-left: 20rem;
+    float: left !important;
+    max-width: 20rem;
+  }
+
+  img{
+    border-radius: black;
+  }
