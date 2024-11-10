@@ -32,6 +32,10 @@
     font-weight: bold;
     transition: background-color 0.2s, box-shadow 0.2s;
   }
+
+  button.modosit{
+    background-color: rgb(32, 31, 31);
+  }
   
   button.btn-dark:hover {
     background-color: #555;
